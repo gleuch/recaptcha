@@ -11,7 +11,7 @@ module Recaptcha
       html  = ""
       if options[:display]
         html << %{<script type="text/javascript">\n}
-        html << %{  var RecaptchaOptions = #{options[:display].to_json};\n}
+        html << %{  var RecaptchaOptions = {theme:#{options[:display].to_json}};\n}
         html << %{</script>\n}
       end
       if options[:ajax]
